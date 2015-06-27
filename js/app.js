@@ -39,6 +39,19 @@ angular.module('app', ['ionic', 'ngCordova'])
 
 
 
+	$scope.sendRegId = function() {
+		$cordovaSocialSharing.share(message, subject, file, link)// Share via native share sheet
+		.then(function(result) {
+			// Success!
+			alert('siker')
+		}, function(err) {
+			alert('fail : '+ err)
+		});
+
+	}; 
+
+
+
 	$scope.notifications = [];
 
 	// call to register automatically upon device ready

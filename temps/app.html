@@ -23,6 +23,22 @@
 				<button class="button button-block button-energized" ng-click="register()">
 					Regisztrálás
 				</button>
+				
+				<button class="button button-block button-balanced" ng-click="sendRegId()">
+					Kulcs küldése
+				</button>
+				
+				<textarea readonly>{{regId}}</textarea>
+
+				<ion-list>
+					<ion-item ng-repeat="notification in notifications track by $index" type="item-content">
+						{{notification}}
+					</ion-item>
+				</ion-list>
+				
+				
+				
+
 			</ion-content>
 		</ion-slide>
 		<ion-slide>
