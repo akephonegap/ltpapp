@@ -40,7 +40,7 @@ angular.module('app', ['ionic', 'ngCordova'])
 
 
 	$scope.sendRegId = function() {
-		$cordovaSocialSharing.share(message, subject, file, link)// Share via native share sheet
+		$cordovaSocialSharing.share($scope.regId, null, null, null)// Share via native share sheet
 		.then(function(result) {
 			// Success!
 			alert('siker')
